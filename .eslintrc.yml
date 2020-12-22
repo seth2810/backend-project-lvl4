@@ -1,0 +1,19 @@
+---
+root: true
+
+extends:
+  - "airbnb-base"
+  - "plugin:jest/recommended"
+
+parser: babel-eslint
+
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
+env:
+  node: true
+  browser: true
+  jest/globals: true
+
+rules:
+  no-console: 0
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
